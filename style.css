@@ -1,0 +1,1036 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 外层全宽盒子允许缩小，但保证内容不崩 */
+.bigbox,
+.banner-wrapper,
+.content-top,
+.content-middle1,
+.yellow-gap{
+
+    min-width: 1200px;   /* 这些外层盒子也不能缩太小 */
+}
+body {
+    font-family: "Microsoft YaHei", "SimHei", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ========== 版心 ========== */
+.inner {
+    width: 1105px;
+    margin: 0 auto;
+}
+
+/* ========== 头部大盒子（全宽蓝色背景） ========== */
+.bigbox {
+    width: 100%;
+    background-color: #105fa4;
+}
+
+/* ========== 上部头部 ========== */
+.header-top {
+    width: 1105px;
+    height: 113px;
+    background-image: url('img2.jpg');
+    background-repeat: no-repeat;
+    background-size: 1105px 113px;
+    position: relative;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+    outline: none;
+}
+
+.logo-link img {
+    display: block;
+    border: none;
+    padding-top: 10px;
+}
+
+.old-version-link {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.old-version-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.old-version-link a:hover {
+    text-decoration: underline;
+}
+
+.search-section {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+
+.search-section form {
+    font-size: 0;
+    display: inline-block;
+}
+
+.search-section input[type="text"] {
+    width: 160px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    padding: 0 10px;
+    font-size: 15px;
+    outline: none;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.search-section input[type="text"]::placeholder {
+    color: rgba(201, 211, 220, 0.854);
+    font-size: 12px;
+}
+
+.search-section button {
+    width: 36px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: none;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.search-section button img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+/* ========== 白线 ========== */
+.header-line {
+    width: 1105px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* ========== 导航栏 ========== */
+.nav-bar {
+    width: 100%;
+    background: url(img3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.nav-item > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 0 15px;
+    line-height: 52px;
+}
+
+.nav-item > a:hover {
+   
+   background-color:#1384e2 ;
+
+}
+
+/* ========== 二级下拉菜单 ========== */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+    z-index: 999;
+}
+
+.nav-item:hover > .submenu {
+    display: block;
+    
+}
+
+.submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+/* 删掉这段错误的 */
+/* .submenu li :hover {
+    background-color: #1384e2;
+} */
+
+/* 改成这样 */
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    
+    /* 加上过渡效果 */
+    transition: all 0.25s ease;
+}
+
+.submenu li a:hover {
+    background-color: #1384e2;  /* 蓝色背景 */
+    color: #fff;                /* 文字变白 */
+}
+
+
+
+/* ========== 黄色缝隙 ========== */
+.yellow-gap {
+    width: 100%;
+    height: 5px;
+    background-color: #d6bd88;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* ========== Banner 区 ========== */
+.banner-wrapper {
+    width: 100%;
+    background-color: #d6e8f5;
+    background-image: url(./10022.jpg);
+}
+
+.banner-wrapper .inner {
+    width: 1105px;
+    margin: 0 auto;
+}
+
+.banner img {
+    width: 1105px;
+    height: auto;
+    display: block;
+}
+
+/* ========== 主要内容区 ========== */
+.main-content {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+
+/* ========== 区块头部通用样式 ========== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    display: inline-block;
+    background-color: #bedcf6;
+    color: #105fa4;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 20px;
+    border-radius: 16px 16px 0 0;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+.more-link {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 28px;
+} 
+
+.more-link:hover {
+    color: #105fa4;
+}
+/* ========== 第一块：学院要闻 + 通知公告 ========== */
+.content-top {
+    width: 100%;
+    background-image: url(./10025.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-color: transparent;
+    
+    height: 402.67px;
+    padding-top: 25px;
+}
+
+.content-top .inner {
+    width: 1100px;
+    height: 377.667px;
+    gap: 37px;
+   
+    box-sizing: content-box;
+    display: flex;
+   
+}
+
+/* ========== 学院要闻：左栏 ========== */
+.section-news {
+    padding-top: 14px;
+    width: 718px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 360px;
+  
+}
+.news-body{
+    display: flex;
+    gap: 32px;
+}
+.news-highlight{
+    width: 350px;
+    height: 286.196px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.news-head{
+    width: 718px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+.news-highlight {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+.highlight-img {
+    width: 350px;
+    height: 274.2px;         /* 官网图片高度 */
+    overflow: hidden;
+}
+
+.highlight-img img {
+    width: 100%;
+    height: 100%;
+    display: block;          /* 强制拉伸填满，不要 cover */
+}
+
+/* 标题压在图片底部 */
+.highlight-title {
+    position: absolute;
+    bottom: 0;
+    width: 331px;
+    box-sizing: border-box;
+    left: 0;
+  width: 100%;
+    height: 45px;             /* 39px 文字区 + 6px 底部留白 */
+    line-height: 39px;        /* 文字只占上面 39px，垂直居中 */
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: #F1F1F1;
+    font-size: 16px;
+    color: #105fa4;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+/* 右侧列表容器 */
+/* 右侧列表容器 */
+.news-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 340px;
+}
+
+.news-item {
+    width: 340px;
+    box-sizing: border-box;
+}
+
+.news-item a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ========== 第一条：padding 5 0 13（图21）========== */
+.news-item-first {
+    padding: 5px 0 13px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    
+}
+
+.news-item-first a {
+    font-size: 16px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #404040;
+    font-weight: bold;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-first a:hover {
+    color: #404040;
+}
+
+/* ========== 第二条：标题+内容分别控制padding（图29）========== */
+.news-item-featured {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding: 0;          /* li本身不padding，交给内部子元素 */
+}
+
+.news-item-featured a {
+    display: block;
+}
+
+/* 标题部分 */
+.news-item-featured h4 {
+    font-size: 16px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #333333;
+    font-weight: bold;
+    margin: 0;            /* 重置h4默认margin */
+    
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-featured a:hover h4 {
+    color: #333333;
+}
+
+/* 内容/摘要部分（图29：padding 上5 下13，内容340×22） */
+.news-item-featured p {
+    font-size: 13px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #7A7A7A;
+    margin: 0;            /* 重置p默认margin */
+    padding: 5px 0 13px 0;  /* 上5 下13，和图29完全一致 */
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-featured a:hover p {
+    color: #105fa4;
+}
+
+/* ========== 普通条目（第3~6条）：34px，无虚线 ========== */
+.news-item:not(.news-item-first):not(.news-item-featured) {
+    height: 34px;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.news-item:not(.news-item-first):not(.news-item-featured) a {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #3B3B3B;
+    line-height: 34px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item:not(.news-item-first):not(.news-item-featured) a:hover {
+    color: #105fa4;
+}
+.section-notice{
+    flex: 1;
+}
+/* ========== 通知公告容器 ========== */
+.section-notice {
+    width: 345px;
+    padding-top: 14px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* header 弹性布局，标题和更多左右分散 */
+.section-notice .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+/* ========== 通知列表 ========== */
+.notice-list {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    width: 345px;
+    box-sizing: border-box;
+}
+
+/* ========== 单条通知 ========== */
+.notice-item {
+    display: flex;
+    align-items: flex-start;
+    width: 345px;
+    height: 90px;
+    margin: 10px 0;
+    padding: 0 0 16px 0;
+    box-sizing: border-box;
+}
+
+/* ========== 左侧日期块 ========== */
+.notice-date {
+    width: 72px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* 日期：大号数字（图3：72×41，24px，白字蓝底） */
+.date-day {
+    width: 72px;
+    height: 41px;
+    background-color: #004891;   /* 默认深蓝 */
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    line-height: 41px;
+    text-align: center;
+    
+    /* 加上过渡 */
+    transition: background-color 0.3s ease;
+}
+
+.date-day:hover {
+    background-color: #d4b896;   /* 悬停后的浅金色，按你截图调 */
+}
+
+/* 月份：小号文字（图4：72×31，12px，灰字灰底，上间距2px） */
+.date-month {
+    width: 72px;
+    height: 31px;
+    background-color: #E6E6E6;
+    color: #737373;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 31px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* ========== 右侧标题区 ========== */
+.notice-title {
+    flex: 1;
+    margin-top: 4px;
+    padding-left: 16px;
+    /* 注意：这里不要写 overflow: hidden，也不要写 white-space */
+}
+
+.notice-title a {
+    font-size: 15px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    text-decoration: none;
+    
+    /* 多行省略四件套 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    
+    /* 关键！必须强制换行，不能被继承的 nowrap 覆盖 */
+    white-space: normal !important;
+    word-break: break-all;
+}
+.notice-title a:hover {
+    color: #105fa4;
+}
+/* 第二个部分 */
+
+.content-middle1{
+   width: 100%;
+    height: 371.333px;
+    box-sizing: border-box;
+    background-image: url(./main3.png);
+
+}
+.content-middle1 .inner {
+    width: 1100px;
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    gap: 32px;
+    margin: 0 auto;
+}
+
+.middle1-secion1,
+.middle1-secion2,
+.middle1-secion3 {
+    flex-shrink: 0;        /* 三列都强制不许压缩 */
+    box-sizing: border-box;
+    height: 286.33px;
+    margin-bottom: 10px;
+  
+}
+
+.middle1-section1 {
+    width: 350px;
+}
+
+.middle1-section2 {
+    width: 341px;          /* 1100 - 350 - 32 - 345 - 32 = 341 */
+}
+
+.middle1-section3 {
+    width: 345px;
+}
+
+/* 列表 */
+.section-list {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+}
+
+.section-list li {
+    margin-bottom: 10px;          /* 图39：下间距10px */
+    height: 24.67px;             /* 图39：行高约24.67px */
+    box-sizing: border-box;
+}
+
+
+
+/* 每条链接：标题和日期左右分布（弹性盒子） */
+/* 每条链接：标题和日期左右分布 */
+.section-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;            /* 统一14px */
+}
+
+/* 左侧标题：14px 微软雅黑 #3B3B3B（图41） */
+.item-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24.67px;
+    font-family: "Microsoft YaHei", sans-serif;  /* 微软雅黑 */
+    color: #3B3B3B;                             /* 图41颜色 */
+}
+
+/* 右侧日期：14px Arial+微软雅黑 #999999（图42） */
+.item-date {
+    flex-shrink: 0;
+    margin-left: 10px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;  /* 图42字体 */
+    color: #999999;                                    /* 图42颜色 */
+    font-size: 14px;
+    line-height: 24.67px;
+    white-space: nowrap;
+}
+/* 悬停标题变蓝 */
+.section-list li a:hover .item-title {
+    color: #105fa4;
+}
+
+/* 师生风采 */
+.content-middle2 .inner{
+    height: 289.33px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+/* ========== 师生风采整体 ========== */
+.content-middle2 {
+    margin-bottom: 25px;   /* 你要求的 25px 下边距 */
+}
+.content-middle2-header{
+    margin-bottom: 20px;
+}
+/* ========== 身体盒子：overflow 裁切 + 上下 6px padding ========== */
+.gallery-body {
+    width: 1100px;
+    overflow: hidden;      /* 关键：超出容器的部分隐藏 */
+    padding: 6px 0;        /* 你要求的上下 6px */
+    box-sizing: border-box;
+}
+
+/* ========== 滚动轨道：弹性盒子横向排列 ========== */
+.gallery-track {
+    display: flex;         /* 弹性盒子，让 8 个卡片横向排成一行 */
+    width: max-content;    /* 宽度由内容自然撑开（8 × 287 = 2296px） */
+    animation: scroll-left 30s linear infinite;
+}
+
+/* ========== 鼠标悬停停止（图片、标题、任意位置都生效） ========== */
+.gallery-body:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+/* ========== 单个卡片：287px 宽，220px 高（180 图 + 40 标题） ========== */
+.gallery-card {
+    width: 287px;
+    height: 220px;
+    flex-shrink: 0;        /* 关键：不允许弹性压缩，保持 287px 固定宽 */
+    text-decoration: none;
+    display: block;
+}
+
+/* ========== 图片容器 287×180，内部图片 250×180 居中 ========== */
+.gallery-img-box {
+    width: 287px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-img-box img {
+    width: 250px;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ========== 标题 287×40，15px 微软雅黑，#3B3B3B ========== */
+.gallery-title {
+    width: 287px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #3B3B3B;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* 悬停标题变蓝（可选，保持和网站风格统一） */
+.gallery-card:hover .gallery-title {
+    color: #105fa4;
+}
+
+/* ========== 向前滚动动画：从右向左（translateX 负方向） ========== */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* 移动整个轨道宽度的一半（正好是第一组 4 个卡片的宽度 1148px） */
+        transform: translateX(-50%);
+    }
+}
+/* 专业介绍 */
+.content-middle3 .inner{
+    height: 236.667px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.content-middle3 .section-header{
+    margin-bottom: 25px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+.major-box {
+    width: 1100px;
+    padding: 6px 0;              /* 上下左右都是 6px */
+    box-sizing: border-box;
+          /* 关键！给 more 图标做定位参考 */
+}
+
+/* ========== 六块网格：弹性盒子核心 ========== */
+.major-grid {
+    display: flex;              /* 开启弹性布局 */
+    flex-wrap: wrap;            /* 允许换行，6个自动折成两行 */
+    justify-content: space-between; 
+    /* 三列均匀分布，两侧贴边 */
+ 
+}
+
+/* ========== 单个专业块 ========== */
+.major-item {
+    width: 339px;              /* 官网约 339px */
+    height: 48px;              /* 官网约 48px */
+    line-height: 48px;         /* 文字垂直居中 */
+    text-align: center;        /* 文字水平居中 */
+      background-color: #ebf1f5;
+    border: 1px solid #d0d7dd;
+    color: #3B3B3B;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-bottom: 26.3px;       /* 上下两行间距 */
+    transition: all .4s ease-in-out;
+    margin: 0 16px 26.3px 16px;
+}
+.major-item:nth-child(1),
+.major-item:nth-child(4){
+    margin-left: 0;
+}
+
+.major-item:hover {
+    color: #105fa5;
+   
+}
+
+/* ========== MORE 图标：绝对定位右下角 ========== */
+.major-more{
+    position: relative;  
+    height: 16.33px;
+    margin-top: 3px;
+}
+.more-icon {
+    position: absolute;
+    right: 6px;                /* 贴住 padding 边界 */
+    bottom: 6px;
+    width: 38px;
+    height: 13px;
+    line-height: 0;
+}
+
+.more-icon img {
+    width: 38px;
+    height: 13px;
+    display: block;
+}
+
+/* 校内资源外层 */
+.content-bottom .inner {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.content-bottom .section-header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* ========== 弹性盒子核心 ========== */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: space-between;   /* 两端对齐：第一个贴左，最后一个贴右 */
+    align-items: center;
+}
+
+.resource-list li {
+    flex-shrink: 0;
+    /* 删掉原来的 margin: 0 7px; —— 就是它导致左边多出 7px 空隙 */
+}
+/* 单个资源块：图标+文字纵向居中 */
+.resource-list li a {
+    position: relative;
+    width: 145px;
+    
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+}
+
+.resource-list li a img {
+    width: 145px;
+    height: 75px;
+    display: block;
+}
+
+/* 文字直接覆盖在图片上 */
+.resource-list li a span {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: inherit;           /* 改成继承，不要写死 #000000 */
+    background: none;
+    height: auto;
+    line-height: 1.4;
+}
+
+/* 悬停时 a 变蓝，span 继承 */
+.resource-list li a:hover {
+    color: #105fa4;
+}
+
+/* ========== 页脚 ========== */
+footer {
+    width: 100%;
+    background-color: #105fa5;
+    min-width: 1200px;
+}
+
+/* --- 上半部分：友情链接 --- */
+.footer-up {
+    height: 84.667px;
+    display: flex;
+    align-items: center;
+}
+
+/* 左侧白色标签块：官网 84×84，白底灰字 */
+.friend-link-label {
+    width: 84px;
+    height: 84px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+.friend-link-label span {
+    font-size: 14px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 右侧链接：白色文字，横向排列 */
+.friend-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-left: 24px;
+    opacity: 0.8;
+}
+
+.friend-links a {
+    font-size: 14px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.friend-links a:hover {
+    cursor: pointer;
+}
+
+/* --- 下半部分：版权居中 + 二维码居右 --- */
+.footer-blow {
+    position: relative;        /* 新增：给二维码绝对定位做参考 */
+    height: 146.67px;
+    box-sizing: border-box;
+    border-top: 1px solid #287cc6;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 改：原来是 space-between，现在居中 */
+}
+
+/* 版权信息：文字在版心内水平居中 */
+.footer-info {
+    text-align: center;      /* 新增 */
+}
+
+.footer-info p {
+    font-size: 13px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    line-height: 1.8;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* 二维码：绝对定位贴右侧，垂直居中 */
+.footer-qr {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    /* 删掉原来的 transition，文字不需要动 */
+}
+
+.qr-item img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    transition: transform 0.25s ease-in-out;  /* 只过渡 transform，时间加快 */
+}
+
+.qr-item span {
+    font-size: 12px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+}
+
+/* 悬停：只有图片放大，文字不动 */
+.qr-item:hover img {
+    transform: scale(1.08);
+}
+
+/* 删掉 .qr-item:hover 的 translateY，文字保持原位 */

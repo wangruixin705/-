@@ -1,0 +1,1155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 外层全宽盒子允许缩小，但保证内容不崩 */
+.bigbox,
+.banner-wrapper,
+.content-top,
+.content-middle1,
+.yellow-gap {
+    min-width: 1200px;
+}
+
+body {
+    font-family: "Microsoft YaHei", "SimHei", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ========== 版心 ========== */
+.inner {
+    width: 1105px;
+    margin: 0 auto;
+}
+
+/* ========== 头部大盒子（全宽蓝色背景） ========== */
+.bigbox {
+    width: 100%;
+    background-color: #105fa4;
+}
+
+/* ========== 上部头部 ========== */
+.header-top {
+    width: 1105px;
+    height: 113px;
+    background-image: url('img2.jpg');
+    background-repeat: no-repeat;
+    background-size: 1105px 113px;
+    position: relative;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+    outline: none;
+}
+
+.logo-link img {
+    display: block;
+    border: none;
+    padding-top: 10px;
+}
+
+/* ========== 头部右侧链接（登录/注册 + 旧版网站） ========== */
+.header-links {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.3s;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.search-section {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+
+.search-section form {
+    font-size: 0;
+    display: inline-block;
+}
+
+.search-section input[type="text"] {
+    width: 160px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    padding: 0 10px;
+    font-size: 15px;
+    outline: none;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.search-section input[type="text"]::placeholder {
+    color: rgba(201, 211, 220, 0.854);
+    font-size: 12px;
+}
+
+.search-section button {
+    width: 36px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: none;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.search-section button img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+/* ========== 白线 ========== */
+.header-line {
+    width: 1105px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* ========== 导航栏 ========== */
+.nav-bar {
+    width: 100%;
+    background: url(img3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.nav-item > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 0 15px;
+    line-height: 52px;
+}
+
+.nav-item > a:hover {
+    background-color: #1384e2;
+}
+
+/* ========== 二级下拉菜单 ========== */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+    z-index: 999;
+}
+
+.nav-item:hover > .submenu {
+    display: block;
+}
+
+.submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.submenu li a:hover {
+    background-color: #1384e2;
+    color: #fff;
+}
+
+/* ========== 黄色缝隙 ========== */
+.yellow-gap {
+    width: 100%;
+    height: 5px;
+    background-color: #d6bd88;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* ========== Banner 区 ========== */
+.banner-wrapper {
+    width: 100%;
+    background-color: #d6e8f5;
+    background-image: url(./10022.jpg);
+}
+
+.banner-wrapper .inner {
+    width: 1105px;
+    margin: 0 auto;
+}
+
+/* ========== 主要内容区 ========== */
+.main-content {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* ========== 区块头部通用样式 ========== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    display: inline-block;
+    background-color: #bedcf6;
+    color: #105fa4;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 20px;
+    border-radius: 16px 16px 0 0;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+.more-link {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+.more-link:hover {
+    color: #105fa4;
+}
+
+/* ========== 第一块：学院要闻 + 通知公告 ========== */
+.content-top {
+    width: 100%;
+    background-image: url(./10025.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-color: transparent;
+    height: 402.67px;
+    padding-top: 25px;
+}
+
+.content-top .inner {
+    width: 1100px;
+    height: 377.667px;
+    gap: 37px;
+    box-sizing: content-box;
+    display: flex;
+}
+
+/* ========== 学院要闻：左栏 ========== */
+.section-news {
+    padding-top: 14px;
+    width: 718px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 360px;
+}
+
+.news-body {
+    display: flex;
+    gap: 32px;
+}
+
+.news-highlight {
+    width: 350px;
+    height: 286.196px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-head {
+    width: 718px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+
+.news-highlight {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+}
+
+.highlight-img {
+    width: 350px;
+    height: 274.2px;
+    overflow: hidden;
+}
+
+.highlight-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 标题压在图片底部 */
+.highlight-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 39px;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: #F1F1F1;
+    font-size: 16px;
+    color: #105fa4;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    z-index: 10;
+}
+
+/* 右侧列表容器 */
+.news-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 340px;
+}
+
+.news-item {
+    width: 340px;
+    box-sizing: border-box;
+}
+
+.news-item a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ========== 第一条 ========== */
+.news-item-first {
+    padding: 5px 0 13px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.news-item-first a {
+    font-size: 16px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #404040;
+    font-weight: bold;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-first a:hover {
+    color: #404040;
+}
+
+/* ========== 第二条 ========== */
+.news-item-featured {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding: 0;
+}
+
+.news-item-featured a {
+    display: block;
+}
+
+.news-item-featured h4 {
+    font-size: 16px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #333333;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-featured a:hover h4 {
+    color: #333333;
+}
+
+.news-item-featured p {
+    font-size: 13px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #7A7A7A;
+    margin: 0;
+    padding: 5px 0 13px 0;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-featured a:hover p {
+    color: #105fa4;
+}
+
+/* ========== 普通条目（第3~6条） ========== */
+.news-item:not(.news-item-first):not(.news-item-featured) {
+    height: 34px;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.news-item:not(.news-item-first):not(.news-item-featured) a {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #3B3B3B;
+    line-height: 34px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item:not(.news-item-first):not(.news-item-featured) a:hover {
+    color: #105fa4;
+}
+
+.section-notice {
+    flex: 1;
+}
+
+/* ========== 通知公告容器 ========== */
+.section-notice {
+    width: 345px;
+    padding-top: 14px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.section-notice .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+/* ========== 通知列表 ========== */
+.notice-list {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    width: 345px;
+    box-sizing: border-box;
+}
+
+/* ========== 单条通知 ========== */
+.notice-item {
+    display: flex;
+    align-items: flex-start;
+    width: 345px;
+    height: 90px;
+    margin: 10px 0;
+    padding: 0 0 16px 0;
+    box-sizing: border-box;
+}
+
+/* ========== 左侧日期块 ========== */
+.notice-date {
+    width: 72px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.date-day {
+    width: 72px;
+    height: 41px;
+    background-color: #004891;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    line-height: 41px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.date-day:hover {
+    background-color: #d4b896;
+}
+
+.date-month {
+    width: 72px;
+    height: 31px;
+    background-color: #E6E6E6;
+    color: #737373;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 31px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* ========== 右侧标题区 ========== */
+.notice-title {
+    flex: 1;
+    margin-top: 4px;
+    padding-left: 16px;
+}
+
+.notice-title a {
+    font-size: 15px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    white-space: normal !important;
+    word-break: break-all;
+}
+
+.notice-title a:hover {
+    color: #105fa4;
+}
+
+/* 第二个部分 */
+.content-middle1 {
+    width: 100%;
+    height: 371.333px;
+    box-sizing: border-box;
+    background-image: url(./main3.png);
+}
+
+.content-middle1 .inner {
+    width: 1100px;
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    gap: 32px;
+    margin: 0 auto;
+}
+
+.middle1-secion1,
+.middle1-secion2,
+.middle1-secion3 {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    height: 286.33px;
+    margin-bottom: 10px;
+}
+
+.middle1-section1 {
+    width: 350px;
+}
+
+.middle1-section2 {
+    width: 341px;
+}
+
+.middle1-section3 {
+    width: 345px;
+}
+
+/* 列表 */
+.section-list {
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+}
+
+.section-list li {
+    margin-bottom: 10px;
+    height: 24.67px;
+    box-sizing: border-box;
+}
+
+.section-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.item-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24.67px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #3B3B3B;
+}
+
+.item-date {
+    flex-shrink: 0;
+    margin-left: 10px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #999999;
+    font-size: 14px;
+    line-height: 24.67px;
+    white-space: nowrap;
+}
+
+.section-list li a:hover .item-title {
+    color: #105fa4;
+}
+
+/* 师生风采 */
+.content-middle2 .inner {
+    height: 289.33px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+.content-middle2 {
+    margin-bottom: 25px;
+}
+
+.content-middle2-header {
+    margin-bottom: 20px;
+}
+
+.gallery-body {
+    width: 1100px;
+    overflow: hidden;
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+}
+
+.gallery-body:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+.gallery-card {
+    width: 287px;
+    height: 220px;
+    flex-shrink: 0;
+    text-decoration: none;
+    display: block;
+}
+
+.gallery-img-box {
+    width: 287px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-img-box img {
+    width: 250px;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-title {
+    width: 287px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #3B3B3B;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.gallery-card:hover .gallery-title {
+    color: #105fa4;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 专业介绍 */
+.content-middle3 .inner {
+    height: 236.667px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.content-middle3 .section-header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.major-box {
+    width: 1100px;
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+
+.major-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.major-item {
+    width: 339px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #ebf1f5;
+    border: 1px solid #d0d7dd;
+    color: #3B3B3B;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-bottom: 26.3px;
+    transition: all .4s ease-in-out;
+    margin: 0 16px 26.3px 16px;
+}
+
+.major-item:nth-child(1),
+.major-item:nth-child(4) {
+    margin-left: 0;
+}
+
+.major-item:hover {
+    color: #105fa5;
+}
+
+.major-more {
+    position: relative;
+    height: 16.33px;
+    margin-top: 3px;
+}
+
+.more-icon {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 38px;
+    height: 13px;
+    line-height: 0;
+}
+
+.more-icon img {
+    width: 38px;
+    height: 13px;
+    display: block;
+}
+
+/* 校内资源外层 */
+.content-bottom .inner {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.content-bottom .section-header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ========== 弹性盒子核心 ========== */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resource-list li {
+    flex-shrink: 0;
+}
+
+.resource-list li a {
+    position: relative;
+    width: 145px;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+}
+
+.resource-list li a img {
+    width: 145px;
+    height: 75px;
+    display: block;
+}
+
+.resource-list li a span {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: inherit;
+    background: none;
+    height: auto;
+    line-height: 1.4;
+}
+
+.resource-list li a:hover {
+    color: #105fa4;
+}
+
+/* ========== 页脚 ========== */
+footer {
+    width: 100%;
+    background-color: #105fa5;
+    min-width: 1200px;
+}
+
+.footer-up {
+    height: 84.667px;
+    display: flex;
+    align-items: center;
+}
+
+.friend-link-label {
+    width: 84px;
+    height: 84px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+.friend-link-label span {
+    font-size: 14px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.friend-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-left: 24px;
+    opacity: 0.8;
+}
+
+.friend-links a {
+    font-size: 14px;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.friend-links a:hover {
+    cursor: pointer;
+}
+
+.footer-blow {
+    position: relative;
+    height: 146.67px;
+    box-sizing: border-box;
+    border-top: 1px solid #287cc6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    font-size: 13px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    line-height: 1.8;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.footer-qr {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.qr-item img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    transition: transform 0.25s ease-in-out;
+}
+
+.qr-item span {
+    font-size: 12px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+}
+
+.qr-item:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   轮播样式（本次修改区域）
+   ========================================================= */
+
+/* ---------- Banner 轮播 ---------- */
+.banner {
+    position: relative;
+    width: 1105px;
+    overflow: hidden;
+    /* 固定高度 435px，与官网一致 */
+    height: 435px;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+.banner-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Banner 左右箭头：圆角矩形黑底白箭头，默认隐藏，悬停轮播区显示 */
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease, background 0.3s;
+    border-radius: 4px;
+    width: 36px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner:hover .banner-arrow {
+    opacity: 1;
+}
+
+/* 触碰箭头时背景再加深一点 */
+.banner-arrow:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.banner-arrow img {
+    width: 20px;
+    height: auto;
+    display: block;
+    /* 强制箭头图标显示为白色 */
+    filter: brightness(0) invert(1);
+}
+
+.banner-prev {
+    left: 0;
+}
+
+.banner-next {
+    right: 0;
+}
+
+/* ---------- Highlight 轮播 ---------- */
+.highlight-slide {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 350px;
+    height: 274.2px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+.highlight-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Highlight 左右箭头：圆角矩形黑底白箭头，默认隐藏，悬停显示 */
+.highlight-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease, background 0.3s;
+    border-radius: 3px;
+    width: 24px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-highlight:hover .highlight-arrow {
+    opacity: 1;
+}
+
+/* 触碰时背景加深 */
+.highlight-arrow:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.highlight-arrow img {
+    width: 14px;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.highlight-prev {
+    left: 0;
+}
+
+.highlight-next {
+    right: 0;
+}
+
+/* 小方点背景：独立的右下角渐变遮罩 */
+.news-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    width: 150px;
+    height: 25px;
+    background: linear-gradient(to left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    z-index: 12;
+    pointer-events: none;
+}
+
+/* 小方点容器 */
+.highlight-dots {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 15;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 小方点 */
+.dot {
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: #105fa4;
+}

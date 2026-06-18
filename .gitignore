@@ -1,0 +1,11 @@
+# Ignore generated submission artifacts
+提交_完整代码.txt
+提交_完整代码.zip
+push_to_github.ps1
+
+# Ignore image assets not required for code submission
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
